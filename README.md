@@ -56,12 +56,12 @@ git show -s --pretty=%P b8d720
 
 * Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
 **Команда**
+
 ```bash
 git log --oneline v0.12.23..v0.12.24
 ```
 
 **Ответ**
-```
 33ff1c03b (tag: v0.12.24) v0.12.24
 b14b74c49 [Website] vmc provider links
 3f235065b Update CHANGELOG.md
