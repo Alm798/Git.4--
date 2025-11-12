@@ -82,6 +82,7 @@ git log -S"func providerSource(" --reverse --format="%H %s" | head -n1
 # при необходимости посмотреть патч:
 
 # git show <коммит_из_строки_выше>
+```
 **Ответ**  
 `8c928e83589d90a031f811fae52a81be7153e82f  main: Consult local directories as potential mirrors of providers`
 ```
