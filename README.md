@@ -53,6 +53,7 @@ git show -s --pretty=%P b8d720
 `56cd7859e05c36c06b56d013b55a252d0bb7e158`  
 `9ea88f22fc6269854151c571162c5bcf958bee2b`
 
+
 * Перечислите хеши и комментарии всех коммитов, которые были сделаны между тегами  v0.12.23 и v0.12.24.
 **Команда**
 ```bash
@@ -71,6 +72,7 @@ d5f9411f5 command: Fix bug when using terraform login on Windows
 4b6d06cc5 Update CHANGELOG.md
 dd01a3507 Update CHANGELOG.md
 225466bc3 Cleanup after v0.12.23 release
+```
 * Найдите коммит, в котором была создана функция `func providerSource`, её определение в коде выглядит так: `func providerSource(...)` (вместо троеточия перечислены аргументы).
 **Как получено**: ищем **появление строки** с объявлением функции по индексации содержимого (`-S`), сортируем от старого к новому и берём первый результат (первое появление в истории).
 
@@ -82,6 +84,7 @@ git log -S"func providerSource(" --reverse --format="%H %s" | head -n1
 # git show <коммит_из_строки_выше>
 **Ответ**  
 `8c928e83589d90a031f811fae52a81be7153e82f  main: Consult local directories as potential mirrors of providers`
+```
 * Найдите все коммиты, в которых была изменена функция `globalPluginDirs`.
 **Команды**
 ```bash
@@ -99,6 +102,7 @@ git log -L :globalPluginDirs:plugins.go --oneline
 41ab0aef7 Add missing OS_ARCH dir to global plugin paths
 66ebff90c move some more plugin search path logic to command
 8364383c3 Push plugin discovery down into command package
+```
 * Кто автор функции `synchronizedWriters`? 
 **Как получено**: ищем первое появление самой сигнатуры функции через `-S`, берём **самый ранний** коммит и выводим автора.
 
